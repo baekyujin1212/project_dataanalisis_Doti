@@ -11,9 +11,8 @@ st.set_page_config(page_title="Air Quality Dashboard", layout="wide")
 # ==========================================
 @st.cache_data
 def load_data():
-    # Pastikan file CSV gabungan sudah kamu bersihkan atau panggil salah satu file contoh jika di lokal
-    # Di sini kita buat fungsi membaca data utama
-    df = pd.read_csv("main_data.csv") # Sesuaikan nama file di local nanti
+    # Mengarah langsung ke file ZIP di dalam folder dashboard GitHub
+    df = pd.read_csv("dashboard/main_data.zip") 
     df.ffill(inplace=True)
     df.bfill(inplace=True)
     df['datetime'] = pd.to_datetime(df[['year', 'month', 'day', 'hour']])
@@ -22,8 +21,8 @@ def load_data():
 # Coba muat data
 try:
     df_clean = load_data()
-except:
-    st.error("Silakan pastikan file dataset (*.csv) berada di folder yang sama dengan file dashboard.py ini!")
+except Exception as e:
+    st.error(f"Gagal memuat dataset! Error: {e}")
     st.stop()
 
 # ==========================================
