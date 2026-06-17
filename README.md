@@ -1,12 +1,14 @@
 # Air Quality Analysis Dashboard 🌍✨
 
 ## Setup Environment - Shell/Terminal
-Buka Command Prompt/Terminal di laptop Anda, lalu jalankan perintah berikut secara berurutan:
+Buka Command Prompt/Terminal di laptop Anda, lalu jalankan perintah berikut:
 ```bash
 cd OneDrive/Documents/submission
 pip install -r requirements.txt
+```
 
-## Setup Environment - Shell/Terminal
-```bash
+## Run steamlit app
+```
+cd dashboard
 streamlit run dashboard.py
 ```
