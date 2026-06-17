@@ -7,6 +7,6 @@ cd OneDrive/Documents/submission
 pip install -r requirements.txt
 
 ## Setup Environment - Shell/Terminal
-```
+```bash
 streamlit run dashboard.py
 ```
