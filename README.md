@@ -6,7 +6,7 @@ Buka Command Prompt/Terminal di laptop Anda, lalu jalankan perintah berikut seca
 cd OneDrive/Documents/submission
 pip install -r requirements.txt
 
-## Run steamlit app
+## Setup Environment - Shell/Terminal
 ```
 streamlit run dashboard.py
 ```
